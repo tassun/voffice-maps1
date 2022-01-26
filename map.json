@@ -24,7 +24,7 @@
                 {
                  "name":"exitUrl",
                  "type":"string",
-                 "value":"_\/global\/tassun.github.io\/voffice-maps1\/map.json"
+                 "value":"_\/global\/tassun.github.io\/voffice-maps1\/map.json#entry-from-maps1"
                 }],
          "type":"tilelayer",
          "visible":true,
