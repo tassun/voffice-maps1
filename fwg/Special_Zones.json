@@ -1,0 +1,30 @@
+{ "columns":6,
+ "image":"assets\/Special_Zones.png",
+ "imageheight":64,
+ "imagewidth":192,
+ "margin":0,
+ "name":"Special_Zones",
+ "properties":[
+        {
+         "name":"tilesetCopyright",
+         "type":"string",
+         "value":"\u00a9 2021 WorkAdventure <https:\/\/workadventu.re\/> \nLicence: WORKADVENTURE SPECIFIC RESOURCES LICENSE (see LICENSE.assets file)"
+        }],
+ "spacing":0,
+ "tilecount":12,
+ "tiledversion":"1.7.2",
+ "tileheight":32,
+ "tiles":[
+        {
+         "id":0,
+         "properties":[
+                {
+                 "name":"collides",
+                 "type":"bool",
+                 "value":true
+                }]
+        }],
+ "tilewidth":32,
+ "type":"tileset",
+ "version":"1.6"
+}
