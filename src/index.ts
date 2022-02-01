@@ -7,7 +7,9 @@ bootstrapExtra().catch(e => console.error(e));
 
 let currentPopup: any = undefined;
 const today = new Date();
-const time = today.getHours() + ":" + today.getMinutes();
+const hh = today.getHours();
+const mm = today.getMinutes();
+const time = (((hh < 10) ? "0":"") + hh) + (((mm < 10) ? ":0" : ":") + mm);
 
 WA.room.onEnterLayer('clockZone').subscribe(() => {
     console.log('toto')
