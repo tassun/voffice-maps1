@@ -174,12 +174,6 @@
          "id":9,
          "name":"clockZone",
          "opacity":1,
-         "properties":[
-                {
-                 "name":"zone",
-                 "type":"string",
-                 "value":"clock"
-                }],
          "type":"tilelayer",
          "visible":false,
          "width":100,
