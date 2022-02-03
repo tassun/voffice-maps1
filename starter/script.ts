@@ -2,7 +2,9 @@
 
 let currentPopup: any = undefined;
 const today = new Date();
-const time = today.getHours() + ":" + today.getMinutes();
+const hh = today.getHours();
+const mm = today.getMinutes();
+const time = (((hh < 10) ? "0":"") + hh) + (((mm < 10) ? ":0" : ":") + mm);
 
 WA.room.onEnterZone('clock', () => {
     currentPopup =  WA.ui.openPopup("clockPopup","It's " + time,[]);
