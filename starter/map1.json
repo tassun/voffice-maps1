@@ -24,7 +24,7 @@
                 {
                  "name":"exitUrl",
                  "type":"string",
-                 "value":"fwg.json#entry-from-maps1"
+                 "value":"fwg.json#entry-from-map1"
                 }],
          "type":"tilelayer",
          "visible":true,

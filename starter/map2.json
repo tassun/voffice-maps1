@@ -42,7 +42,7 @@
                 {
                  "name":"exitUrl",
                  "type":"string",
-                 "value":"fwg.json#entry-from-maps2"
+                 "value":"fwg.json#entry-from-map2"
                 }],
          "type":"tilelayer",
          "visible":true,
