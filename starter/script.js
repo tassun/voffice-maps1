@@ -49,6 +49,10 @@ var fountainSoundConfig = {
 
 WA.room.onEnterZone('fountainsound', () => {
 	fountainSound.play(fountainSoundConfig);
+	setTimeout(function() { 
+		fountainSound.stop();
+		console.log("sound stop : time out");
+	},5000);
 });
 WA.room.onLeaveZone('fountainsound', () => { 
 	console.log("on leave zone : fountainsound");
