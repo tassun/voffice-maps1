@@ -39,7 +39,7 @@ function closePopUp() {
 var fountainSound = WA.sound.loadSound("../assets/sound/water.ogg");
 var fountainSoundConfig = {
     volume : 0.5,
-    loop : false,
+    loop : true,
     rate : 1,
     detune : 1,
     delay : 0,
