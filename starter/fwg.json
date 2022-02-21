@@ -576,7 +576,7 @@
         {
          "columns":5,
          "firstgid":2340,
-         "image":"D:\/Projects\/voffice\/workadventure\/maps\/assets\/fountain.png",
+         "image":"..\/assets\/fountain.png",
          "imageheight":64,
          "imagewidth":160,
          "margin":0,
