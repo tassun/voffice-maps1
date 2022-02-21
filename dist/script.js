@@ -5,7 +5,7 @@ const today = new Date();
 const hh = today.getHours();
 const mm = today.getMinutes();
 const time = (((hh < 10) ? "0":"") + hh) + (((mm < 10) ? ":0" : ":") + mm);
-/*
+
 const clockLists = [
 	{ "zone":"clock", "popup":"clockPopup" },
 	{ "zone":"clock1", "popup":"clock1Popup" },
@@ -21,12 +21,13 @@ for(var i=0,isz=clockLists.length;i<isz;i++) {
 	});
 	WA.room.onLeaveZone(ck.zone, closePopUp);	
 }
-*/
 
+/*
 	WA.room.onEnterZone('clock', () => {
 		currentPopup = WA.ui.openPopup('clockPopup', "It's " + time, []);
 	});
 	WA.room.onLeaveZone('clock', closePopUp);	
+*/
 
 function closePopUp() {
     if (currentPopup !== undefined) {
