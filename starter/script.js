@@ -35,4 +35,23 @@ function closePopUp() {
         currentPopup = undefined;
     }
 }
+
+var fountainSound = WA.sound.loadSound("../assets/sound/water.ogg");
+var fountainSoundConfig = {
+    volume : 0.5,
+    loop : false,
+    rate : 1,
+    detune : 1,
+    delay : 0,
+    seek : 0,
+    mute : false
+};
+
+WA.room.onEnterZone('fountainsound', () => {
+	fountainSound.play(fountainSoundConfig);
+});
+WA.room.onLeaveZone('fountainsound', () => { 
+	fountainSound.stop();
+});	
+
 //# sourceMappingURL=script.js.map
