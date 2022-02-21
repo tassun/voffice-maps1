@@ -44,7 +44,7 @@ var fountainSoundConfig = {
     detune : 1,
     delay : 0,
     seek : 0,
-    mute : false
+    mute : true
 };
 
 WA.room.onEnterZone('fountainsound', () => {
