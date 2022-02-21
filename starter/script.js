@@ -51,7 +51,9 @@ WA.room.onEnterZone('fountainsound', () => {
 	fountainSound.play(fountainSoundConfig);
 });
 WA.room.onLeaveZone('fountainsound', () => { 
+	console.log("on leave zone : fountainsound");
 	fountainSound.stop();
+	console.log("sound stop");
 });	
 
 //# sourceMappingURL=script.js.map
