@@ -72,7 +72,7 @@
                 {
                  "name":"jitsiRoom",
                  "type":"string",
-                 "value":"MeetingRoom"
+                 "value":"FSM2MeetingRoom"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -90,7 +90,7 @@
                 {
                  "name":"jitsiRoom",
                  "type":"string",
-                 "value":"ChillZone"
+                 "value":"FSM2ChillZone"
                 }, 
                 {
                  "name":"jitsiTrigger",
