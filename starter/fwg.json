@@ -10,12 +10,17 @@
          "opacity":1,
          "properties":[
                 {
-                 "name":"zone",
+                 "name":"audioLoop",
+                 "type":"bool",
+                 "value":true
+                }, 
+                {
+                 "name":"playAudio",
                  "type":"string",
-                 "value":"fountainsound"
+                 "value":"..\/assets\/sound\/water.ogg"
                 }],
          "type":"tilelayer",
-         "visible":false,
+         "visible":true,
          "width":100,
          "x":0,
          "y":0
