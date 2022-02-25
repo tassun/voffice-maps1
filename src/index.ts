@@ -26,9 +26,41 @@ for(var i=0,isz=clockLists.length;i<isz;i++) {
 	});
 	WA.room.onLeaveZone(ck.zone, closePopUp);	
 }
+
 function closePopUp(){
     if (currentPopup !== undefined) {
         currentPopup.close();
         currentPopup = undefined;
     }
 }
+
+function generateKEY() {
+    var digits = "0123456789";
+    let key = "";
+    for (let i = 0; i < 4; i++ ) {
+        key += digits[Math.floor(Math.random() * 10)];
+    }
+    return key;
+}
+
+WA.room.onEnterZone("officeDoor2OutsideKey", () => {
+	let curKey = WA.state.loadVariable("officeDoor2Key");
+	console.log("Current key = ", curKey);
+	let newKey = generateKEY();
+	currentPopup = WA.ui.openPopup("doorKeyPopup", "Press " + newKey, []);
+	WA.state.saveVariable("officeDoor2Key",newKey);
+});
+WA.room.onLeaveZone("officeDoor2OutsideKey", closePopUp);	
+
+WA.state.onVariableChange("officeDoor2Key").subscribe((value: unknown) => {
+    console.log("Door key = ", value);
+});
+
+WA.room.onEnterZone("officeOutsideDoor2", () => {
+	let curKey = WA.state.loadVariable("officeDoor2Key");
+	currentPopup = WA.ui.openPopup("doorKeyPopup", "Press " + curKey, []);
+});
+WA.room.onLeaveZone("officeOutsideDoor2", closePopUp);	
+
+let doorKey = generateKEY();
+WA.state.saveVariable("officeDoor2Key",doorKey);
