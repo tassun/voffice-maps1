@@ -55,12 +55,12 @@ WA.room.onLeaveZone("officeDoor2OutsideKey", closePopUp);
 WA.state.onVariableChange("officeDoor2Key").subscribe((value: unknown) => {
     console.log("Door key = ", value);
 });
-
-WA.room.onEnterZone("officeOutsideDoor2", () => {
+/*
+WA.room.onEnterZone("officeOutside2", () => {
 	let curKey = WA.state.loadVariable("officeDoor2Key");
 	currentPopup = WA.ui.openPopup("doorKeyPopup", "Press " + curKey, []);
 });
-WA.room.onLeaveZone("officeOutsideDoor2", closePopUp);	
-
+WA.room.onLeaveZone("officeOutside2", closePopUp);	
+*/
 let doorKey = generateKEY();
 WA.state.saveVariable("officeDoor2Key",doorKey);
