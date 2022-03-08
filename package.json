@@ -17,7 +17,7 @@
   },
   "scripts": {
     "dev": "webpack serve",
-    "start": "webpack-dev-server serve --https --open",
+    "start": "webpack-dev-server serve --https --port 443 --open",
     "startup": "webpack serve --open",
     "build": "webpack --config webpack.prod.js",
     "test": "ts-node node_modules/jasmine/bin/jasmine --config=jasmine.json",

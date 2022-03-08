@@ -20,7 +20,8 @@ const clockLists = [
 	{ "zone":"clock1", "popup":"clock1Popup" },
 	{ "zone":"clock2", "popup":"clock2Popup" },	
 	{ "zone":"clock3", "popup":"clock3Popup" },	
-	{ "zone":"clock4", "popup":"clock4Popup" }	
+	{ "zone":"clock4", "popup":"clock4Popup" },	
+	{ "zone":"clock5", "popup":"clock5Popup" }	
 ];
 for(var i=0,isz=clockLists.length;i<isz;i++) {
 	let ck = clockLists[i];
@@ -48,8 +49,8 @@ function generateKEY() {
 }
 
 WA.room.onEnterZone("officeDoor2OutsideKey", () => {
-	let curKey = WA.state.loadVariable("officeDoor2Key");
-	console.log("Current key = ", curKey);
+	//let curKey = WA.state.loadVariable("officeDoor2Key");
+	//console.log("Current key = ", curKey);
 	let newKey = generateKEY();
 	currentPopup = WA.ui.openPopup("doorKeyPopup", "Press " + newKey, []);
 	WA.state.saveVariable("officeDoor2Key",newKey);
@@ -57,7 +58,7 @@ WA.room.onEnterZone("officeDoor2OutsideKey", () => {
 WA.room.onLeaveZone("officeDoor2OutsideKey", closePopUp);	
 
 WA.state.onVariableChange("officeDoor2Key").subscribe((value: unknown) => {
-    console.log("Door key = ", value);
+    //console.log("Door key = ", value);
 });
 /*
 WA.room.onEnterZone("officeOutside2", () => {
