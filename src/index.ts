@@ -10,10 +10,6 @@ WA.onInit().then(() => {
 });
 
 let currentPopup: any = undefined;
-const today = new Date();
-const hh = today.getHours();
-const mm = today.getMinutes();
-const time = (((hh < 10) ? "0":"") + hh) + (((mm < 10) ? ":0" : ":") + mm);
 
 const clockLists = [
 	{ "zone":"clock", "popup":"clockPopup" },
@@ -27,6 +23,7 @@ for(var i=0,isz=clockLists.length;i<isz;i++) {
 	let ck = clockLists[i];
 	console.log(ck.zone+" = "+ck.popup);
 	WA.room.onEnterZone(ck.zone, () => {
+		let time = getCurrentTime();
 		currentPopup = WA.ui.openPopup(ck.popup, "It's " + time, []);
 	});
 	WA.room.onLeaveZone(ck.zone, closePopUp);	
@@ -37,6 +34,13 @@ function closePopUp(){
         currentPopup.close();
         currentPopup = undefined;
     }
+}
+
+function getCurrentTime() {
+	let today = new Date();
+	let hh = today.getHours();
+	let mm = today.getMinutes();
+	return (((hh < 10) ? "0":"") + hh) + (((mm < 10) ? ":0" : ":") + mm);	
 }
 
 function generateKEY() {
